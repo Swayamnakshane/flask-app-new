@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Message Board</title>
+</head>
+<body>
+    <h1>Welcome to Flask App built by TWS Mumbai & Pune team</h1>
+
+    <form method="POST">
+        <input type="text" name="message" placeholder="Enter your message" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Messages:</h2>
+    <ul>
+        {% for message in messages %}
+            <li>{{ message[0] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
